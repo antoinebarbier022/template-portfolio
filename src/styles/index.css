@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+  @apply bg-fixed 
+  
+  /*bg-gradient-to-tr from-indigo-800 via-purple-800 to-purple-400*/
+/* bg-gradient-to-bl from-blue-900 via-indigo-500 to-purple-400 */
+}
+
+.App{
+  @apply h-full
+}
+
+strong{
+  @apply text-white font-semibold 
+}
+
+.description a{
+  @apply text-white font-semibold 
+}
+
+.description a:hover{
+  @apply text-white font-semibold underline
+}
+
