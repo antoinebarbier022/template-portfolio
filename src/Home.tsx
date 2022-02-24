@@ -5,11 +5,17 @@ import SocialNetworks from './components/SocialNetworks/SocialNetworks.component
 import MusicPlateforms from './components/LinksPlateforms/LinksPlateforms.component';
 import Contact from "./components/Contact/Contact.component";
 import YoutubeSlide from "./components/YoutubeSlide/YoutubeSlide.component";
+import CustomLinksSection from "./components/CustomLinksSection/CustomLinksSection.component";
+import useRssFlux from "./hooks/RssFlux.hook";
 
 function Home() {
       // set background 
   const tab = theme.appBg.split(" ");
   tab.map( (x: string) => document.body.classList.add(x));
+
+  const test = useRssFlux("https://www.youtube.com/feeds/videos.xml?channel_id=UCK79IQiAXywwMUMsDxqmnGw");
+
+
   return (
     <div className={`App h-full py-10 ${theme.textColor}`}>
       <Card background={theme.cardBg} opacity={theme.cardOpacity}>
@@ -26,7 +32,9 @@ function Home() {
             <p className={`description font-light text-justify my-5  ${theme.textOpacity} ${theme.textColor} `}> {data.description}</p>
           </div>
 
-          <YoutubeSlide chanelId="UCK79IQiAXywwMUMsDxqmnGw" ></YoutubeSlide>
+          <YoutubeSlide chanelId={data.youtubeSlide!.chanelId} playlistId={data.youtubeSlide!.playlistId}></YoutubeSlide>
+
+          <CustomLinksSection data={data.customLinks} hidden={data.customLinks === undefined}></CustomLinksSection>
 
           <MusicPlateforms data={data.plateforms} 
                             className={!(data.contact === undefined) ? "mb-2": ""}
@@ -42,7 +50,7 @@ function Home() {
 
           <footer className={`flex-col justify-center align-center text-center`}>
             <span className={` text-center ${theme.textOpacity} ${theme.textColor}`}>{data.title} © {new Date().getFullYear()}</span>
-            <span> - Made by <a href="https://www.antoinebarbier.fr" target="_blank" rel='noopener noreferrer' className={` font-medium ${theme.textColor} `}>@An_toine</a> </span>
+            <span> - Made with 🚀 by <a href="https://www.antoinebarbier.fr" target="_blank" rel='noopener noreferrer' className={` font-medium ${theme.textColor} `}>@An_toine</a> </span>
           </footer>
         </Card>
     </div>

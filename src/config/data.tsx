@@ -26,6 +26,14 @@ const data : DataModel= {
         //location: "36 quai des Orfèvres, Paris ",
         email: "antoine.barbier@icloud.com"
     },
+
+    youtubeSlide: { chanelId:"UCK79IQiAXywwMUMsDxqmnGw" },
+
+    customLinks: [
+        {name:"🚀 Paypal 🚀", link:"null",},
+        {name:"Hello toi", link:"null"},
+        {name:"booooom", link:"null"},
+    ],
     
     plateforms: [ 
         {name:"5euro.com", link:"null"},

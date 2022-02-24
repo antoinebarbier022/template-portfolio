@@ -12,6 +12,8 @@ export interface DataModel{
         alt: string
     },
     description: any,
+    youtubeSlide?: { chanelId?: string, playlistId?: string }
+    customLinks?: Array<{ name: string, link: string, style?: string}>
     contact?: {
         email?:string,
         phone?:string,
