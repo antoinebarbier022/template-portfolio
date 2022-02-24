@@ -10,6 +10,8 @@ import { ReactComponent as Facebook} from '../../assets/plateforms/facebook.svg'
 import { ReactComponent as Linkedin} from '../../assets/plateforms/linkedin.svg';
 import { ReactComponent as Dribbble} from '../../assets/plateforms/dribbble.svg';
 import { ReactComponent as Fiver} from '../../assets/plateforms/fiver.svg';
+import { ReactComponent as Twitter} from '../../assets/plateforms/twitter.svg';
+import { ReactComponent as Twitch} from '../../assets/plateforms/twitch.svg';
 import malt from '../../assets/plateforms/malt.png';
 import gitlab from '../../assets/plateforms/gitlab.png';
 import github from '../../assets/plateforms/github.png';
@@ -47,6 +49,8 @@ function LinksPlateforms( { hidden = false, className, data, } : LinksPlateforms
       ["Linkedin", <Linkedin width={120} height={40}/>],
       ["Dribbble", <Dribbble width={120} height={40}/>],
       ["Fiver", <Fiver width={120} height={30}/>],
+      ["Twitter", <Twitter width={120} height={40}/>],
+      ["Twitch", <Twitch width={120} height={30}/>],
       ["Malt", <img src={malt} width={130} alt="logo Malt "></img>],
       ["Gitlab", <img src={gitlab} width={130} alt="logo Gitlab "></img>],
       ["Github", <img src={github} width={130} alt="logo Github "></img>],

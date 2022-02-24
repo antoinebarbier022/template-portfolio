@@ -39,6 +39,7 @@ const data : DataModel= {
         {name:"5euro.com", link:"null"},
         {name:"Github", link:"null"},
         {name:"Dribbble", link:"null"},
+        {name:"Twitch", link:"null"},
        ],
     socialNetworks:[ 
         {name:"Facebook",link:"null"},
