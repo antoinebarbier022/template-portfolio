@@ -1,9 +1,9 @@
 import { ThemeModel } from "../model/theme.model";
 
 const theme: ThemeModel = {
-    appBg: "bg-sky-600",
+    appBg: "bg-gradient-to-br from-orange-200 to-sky-600",
 
-    styleImg:"md:w-[400px]",
+    styleImg:"md:w-[200px]",
     
     cardBg: "bg-black",
     cardOpacity: "bg-opacity-10",
@@ -11,8 +11,8 @@ const theme: ThemeModel = {
     textColor: "text-white",
     textOpacity: "text-opacity-80",
 
-    linkMusicBg: "bg-white/[0.08] ",
-    linkMusicHoverBg: "hover:bg-white/[0.15]",
+    linkMusicBg: "bg-black/[0.08] ",
+    linkMusicHoverBg: "hover:bg-black/[0.15]",
 
     iconFill: "fill-white/60",
     iconFillHover: "hover:fill-white/90",

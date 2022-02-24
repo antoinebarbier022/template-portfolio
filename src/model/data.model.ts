@@ -7,7 +7,7 @@ export interface DataModel{
     },
     title:string,
     subtitle:string,
-    image:{
+    image?:{
         src: any,
         alt: string
     },

@@ -4,6 +4,7 @@ import Card from './components/Card/Card.component';
 import SocialNetworks from './components/SocialNetworks/SocialNetworks.component';
 import MusicPlateforms from './components/LinksPlateforms/LinksPlateforms.component';
 import Contact from "./components/Contact/Contact.component";
+import YoutubeSlide from "./components/YoutubeSlide/YoutubeSlide.component";
 
 function Home() {
       // set background 
@@ -13,13 +14,19 @@ function Home() {
     <div className={`App h-full py-10 ${theme.textColor}`}>
       <Card background={theme.cardBg} opacity={theme.cardOpacity}>
           <div className={`mb-8`}>
-            <figure className={`mb-10`}>
-              <img src={data.image.src} alt={data.image.alt} className={`mx-auto rounded-2xl border-4 border-white/10 ${theme.styleImg} aspect-auto`}></img>
-            </figure>
+            {
+              data.image &&
+                <figure className={`mb-10`}>
+                  <img src={data.image.src} alt={data.image.alt} className={`mx-auto rounded-2xl border-4 border-white/10 ${theme.styleImg} aspect-auto`}></img>
+                </figure>
+            }
+            
             <h1 className={`text-2xl font-bold uppercase`}>{data.title}</h1>
             <h2 className={`mb-2 text-md font-mono`}>{data.subtitle}</h2> 
             <p className={`description font-light text-justify my-5  ${theme.textOpacity} ${theme.textColor} `}> {data.description}</p>
           </div>
+
+          <YoutubeSlide chanelId="UCK79IQiAXywwMUMsDxqmnGw" ></YoutubeSlide>
 
           <MusicPlateforms data={data.plateforms} 
                             className={!(data.contact === undefined) ? "mb-2": ""}

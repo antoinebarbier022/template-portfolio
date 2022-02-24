@@ -7,12 +7,12 @@ const data : DataModel= {
         type: "emoji",
         src: `💻`
     },
-    title:"Antoine",
-    subtitle:"Developpeur Web Freelance",
-    image:{
+    title:"Miary ミアリー",
+    subtitle:"Developpeur Web Freelance ",
+    /*image:{
         src: image,
         alt: "Michel Hubert dans son studio"
-    },
+    },*/
     description: <>
         Passionné par le design et l'informatique, je me lance sur <strong>5euros.com</strong> afin de partager mes compétences dans le domaine du développement web. <br/><br/>
         J'ai créé un template de site web vitrine comme celui-ci afin que je puisse vous offrir un site original, personalisé et design pour <strong>seulement 45€ </strong>!
