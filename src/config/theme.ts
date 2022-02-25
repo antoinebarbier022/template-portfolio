@@ -1,7 +1,7 @@
 import { ThemeModel } from "../model/theme.model";
 
 const theme: ThemeModel = {
-    appBg: "bg-gradient-to-br from-orange-200 to-sky-600",
+    appBg: "bg-gradient-to-br from-orange-300 to-blue-600",
 
     styleImg:"md:w-[200px]",
     
