@@ -1,5 +1,6 @@
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import '@splidejs/splide/dist/css/splide.min.css';
+import './YoutubeSlide.style.css';
 import useRssFlux from "../../hooks/RssFlux.hook";
 import { ReactComponent as Youtube } from '../../assets/icons/socialNetworks/youtube-brands.svg';
 
@@ -19,12 +20,12 @@ function YoutubeSlide({ playlistId, chanelId, title = false, hidden, className }
     console.log(items?.length)
     
     const splideOptions: any = { 
-        type: 'slide',
+        type: 'loop',
         focus  : 'center',
         autoWidth: true,
         fixedWidth: "100px",
         widthRatio: 16/9,
-        pagination: false,
+        pagination: true,
         height:'200px',
         gap    : '2rem',
     };
@@ -33,7 +34,7 @@ function YoutubeSlide({ playlistId, chanelId, title = false, hidden, className }
         return (<></>);
     }
     return ( 
-    <div className={`flex flex-col gap-2 section-plateforms container rounded-xl mb-8 ${className}`}>
+    <div className={`flex flex-col gap-2 section-plateforms container rounded-xl mb-6 ${className}`}>
         <Splide className="slider overflow-hidden" options={splideOptions}>
     {
       items !== undefined &&
@@ -44,7 +45,7 @@ function YoutubeSlide({ playlistId, chanelId, title = false, hidden, className }
                     title={value.title}
                     rel="noopener noreferrer"
                     target="_blank"
-                    className="w-full h-full transition ease-in-out delay-0 fill-white/50 hover:fill-white/80">
+                    className="w-full h-full transition ease-in-out delay-0 fill-white/0 hover:fill-white/80">
                         
                 <figure className=" h-full w-full">
                     <img  src={value.thumbnail} 

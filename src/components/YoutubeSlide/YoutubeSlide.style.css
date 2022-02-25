@@ -1,0 +1,8 @@
+.splide__pagination{
+    position: relative;
+    margin-top: 1rem;
+}
+
+.splide__arrow {
+    margin-top: -1rem;
+}

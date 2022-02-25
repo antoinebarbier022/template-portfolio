@@ -21,19 +21,25 @@ function Home() {
     <div className={`App h-full py-10 ${theme.textColor}`}>
       <Card background={theme.cardBg} opacity={theme.cardOpacity}>
           <div className={`mb-8`}>
-            {
-              data.image &&
-                <figure className={`mb-10`}>
-                  <img src={data.image.src} alt={data.image.alt} className={`mx-auto rounded-2xl border-4 border-white/10 ${theme.styleImg} aspect-auto`}></img>
-                </figure>
-            }
+            <div className="flex md:flex-col gap-5 items-center">
+              {
+                data.image &&
+                  <figure className={``}>
+                    <img src={data.image.src} alt={data.image.alt} className={`mx-auto rounded-full border-4 border-white/10 ${theme.styleImg} aspect-auto`}></img>
+                  </figure>
+              }
+              <div className="text-center">
+                <h1 className={`text-2xl font-bold uppercase`}>{data.title}</h1>
+                <h2 className={`mb-2 text-md font-mono`}>{data.subtitle}</h2> 
+              </div>
+            </div>
             
-            <h1 className={`text-2xl font-bold uppercase`}>{data.title}</h1>
-            <h2 className={`mb-2 text-md font-mono`}>{data.subtitle}</h2> 
+            
             <p className={`description font-light text-justify my-5  ${theme.textOpacity} ${theme.textColor} `}> {data.description}</p>
           </div>
 
-          <YoutubeSlide chanelId={data.youtubeSlide!.chanelId} playlistId={data.youtubeSlide!.playlistId}></YoutubeSlide>
+          <YoutubeSlide chanelId={data.youtubeSlide?.chanelId} 
+                      playlistId={data.youtubeSlide?.playlistId}></YoutubeSlide>
 
           <CustomLinksSection data={data.customLinks} hidden={data.customLinks === undefined}></CustomLinksSection>
 
